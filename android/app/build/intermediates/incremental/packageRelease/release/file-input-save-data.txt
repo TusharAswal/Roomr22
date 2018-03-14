@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Mar 14 09:58:39 IST 2018
+#Wed Mar 14 10:39:33 IST 2018
 5.base=/Users/tushar.aswal/Desktop/ROOMR2/Roomr22/android/app/build/intermediates/transforms/mergeJniLibs/release/0
 22.path=lib/x86/libicu_common.so
 32.set=NATIVE_RESOURCE

@@ -68,10 +68,18 @@ class AddPerson extends Component {
        age:this.state.age,
        path:this.state.path
       } ]; 
-    console.log(users);
+      if(this.state.name == '')
+      {
+        alert('Please Enter Name');
+      }
+      else
+      {
+         console.log(users);
       await AsyncStorage.setItem('users', 
         JSON.stringify(users)); 
       Actions.searchroomer();
+      }
+   
     }
   
     render() {
