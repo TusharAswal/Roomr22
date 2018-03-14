@@ -1,0 +1,36 @@
+[
+  {
+  "name":"Sample1",
+  "Address":"Mohali",
+  "image":"https://randomuser.me/api/portraits/men/49.jpg"
+  },
+
+  {
+    "name":"Sample2",
+    "Address":"Mohali",
+    "image":"https://randomuser.me/api/portraits/men/58.jpg"
+  },
+
+  {
+    "name":"Sample3",
+    "Address":"Mohali",
+    "image":"https://randomuser.me/api/portraits/men/44.jpg"
+  },
+  {
+    "name":"Sample4",
+    "Address":"Mohali",
+    "image":"https://randomuser.me/api/portraits/men/43.jpg"
+    },
+  
+    {
+      "name":"Sample5",
+      "Address":"Mohali",
+      "image":"https://randomuser.me/api/portraits/men/51.jpg"
+    },
+  
+    {
+      "name":"Sample6",
+      "Address":"Mohali",
+      "image":"https://randomuser.me/api/portraits/men/40.jpg"
+    }
+]

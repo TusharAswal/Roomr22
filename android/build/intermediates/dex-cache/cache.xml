@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/tushar.aswal/Desktop/ROOMR2/Roomr22/node_modules/react-native-vector-icons/android/build/intermediates/intermediate-jars/release/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        <dex dex="/Users/tushar.aswal/Desktop/ROOMR2/Roomr22/android/app/build/intermediates/transforms/preDex/release/23.jar" />
+    </item>
+
+</items>
