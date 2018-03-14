@@ -9,6 +9,7 @@ import page3 from './page3.png'
 import roomerjson from './roomrJSON';
 import { width, height, totalSize } from 'react-native-dimension';
 class CreateHome extends Component {
+  
   constructor(props){
     super(props);
    this.state = {
@@ -19,28 +20,29 @@ class CreateHome extends Component {
         title:'',
        },{
         onclick:0,
-        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7NytqLGF_8gV0jBAD867dFnDhDhrb0NeBcdRNHZaru3P2ouIWEg',
+        image:'http://markinternational.info/data/out/335/221687634-wallpapers-in-white-backgrounds.jpg',
         title:''
        },{
         onclick:0,
-        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7NytqLGF_8gV0jBAD867dFnDhDhrb0NeBcdRNHZaru3P2ouIWEg',
+        image:'http://markinternational.info/data/out/335/221687634-wallpapers-in-white-backgrounds.jpg',
         title:''
        },{
         onclick:0,
-        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7NytqLGF_8gV0jBAD867dFnDhDhrb0NeBcdRNHZaru3P2ouIWEg',
+        image:'http://markinternational.info/data/out/335/221687634-wallpapers-in-white-backgrounds.jpg',
         title:''
        },{
         onclick:0,
-        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7NytqLGF_8gV0jBAD867dFnDhDhrb0NeBcdRNHZaru3P2ouIWEg',
+        image:'http://markinternational.info/data/out/335/221687634-wallpapers-in-white-backgrounds.jpg',
         title:''
        },{
         onclick:0,
-        image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7NytqLGF_8gV0jBAD867dFnDhDhrb0NeBcdRNHZaru3P2ouIWEg',
+        image:'http://markinternational.info/data/out/335/221687634-wallpapers-in-white-backgrounds.jpg',
         title:''
        }
      ],
   }
 }
+_keyExtractor = (item, index) => item.id;
 FlatListItemSeparator = () => {
   return (
     <View
@@ -61,7 +63,7 @@ FlatListItemSeparator = () => {
             title:''
            },{
             onclick:0,
-            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7NytqLGF_8gV0jBAD867dFnDhDhrb0NeBcdRNHZaru3P2ouIWEg',
+            image:'http://markinternational.info/data/out/335/221687634-wallpapers-in-white-backgrounds.jpg',
             title:''
            });
             this.setState({list: ar});
@@ -100,10 +102,7 @@ FlatListItemSeparator = () => {
           ItemSeparatorComponent = {this.FlatListItemSeparator}
           renderItem={({item}) =>{
             let action='';
-            // if(item.onclick==1)
-            //    action = Actions.searchroomer();
-            // else
-            //    action='';
+            
             return(
               <View style={{marginLeft:10,marginRight:10,marginBottom:0,marginTop:10}}>
                 <View>         

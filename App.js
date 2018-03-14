@@ -20,8 +20,6 @@ import {
 } from 'react-native-router-flux';
 import frontpage from './component/frontpage';
 import page2 from './component/page2';
-
-import search from './component/search';
 import { width, height, totalSize } from 'react-native-dimension';
 import list from './component/list';
 import SearchRoomer from './component/SearchRoomerList';
@@ -91,12 +89,7 @@ const App = () => {
             title='Add a new Person'
             titleStyle={styles.title4}
              />
-             <Scene
-             key='search'
-             component={search}
-             title='Add a person'
-             titleStyle={styles.title3}
-              />
+             
              
              <Scene
              key='rooms'

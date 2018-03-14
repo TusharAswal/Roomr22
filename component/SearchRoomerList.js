@@ -35,7 +35,7 @@ export default class SearchRoomerList extends Component {
          image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7NytqLGF_8gV0jBAD867dFnDhDhrb0NeBcdRNHZaru3P2ouIWEg',
          title:'Paul'
         }
-      ]
+      ] 
     }
   }
   async componentDidMount(){
@@ -46,7 +46,7 @@ export default class SearchRoomerList extends Component {
         if(data){
           this.setState({emails: JSON.parse(data)});
         }else{
-            // this.setState({list:list});
+          
         }
   }
   async searchperson(image='',title=''){
@@ -55,9 +55,7 @@ export default class SearchRoomerList extends Component {
         image:image,
         title:title,
     }];
-    // AsyncStorage.removeItem('personselected');
     await AsyncStorage.setItem('personselected',JSON.stringify(personselected));
-    // await AsyncStorage.setItem('emails',JSON.stringify(emails));
     Actions.createhome();
   }
   searchUpdated(term) {
@@ -65,14 +63,16 @@ export default class SearchRoomerList extends Component {
   }
   render() {
     const filteredEmails = this.state.emails.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
+    console.log("This",filteredEmails.length);
     let html = '';
+    if(filteredEmails.length>0){
     if(this.state.emails.length>0){
         html = ( <ScrollView>
               {filteredEmails.map(email => {
                   return (
                   <TouchableOpacity onPress={() => this.searchperson(email.path,email.name)}>
                       <View>
-                          <View style = {{flex:1, flexDirection:'row', margin:5, paddingLeft:10,
+                          <View style = {{flex:1, flexDirection:'row', margin:5, paddingLeft:10,borderWidth:2,
                               justifyContent:'center'}}>
                                   <View style={{flex: 0.3,justifyContent:'center'}}>
                                       <Image source={{uri: email.path}}
@@ -91,10 +91,13 @@ export default class SearchRoomerList extends Component {
                   </TouchableOpacity>
                   )
               })}
-          </ScrollView>);
-       }else{
-             html = (<View style={{alignItems:'center',justifyContent:'center'}}><Text>Sorry No persons added till now!</Text></View>)
+          </ScrollView>);}
+          
+       else{
+             html = (<View style={{alignItems:'center',justifyContent:'center'}}><Text>No Person Added</Text></View>)
           }
+        }
+        else{html = (<View style={{alignItems:'center',justifyContent:'center'}}><Text>No match</Text></View>)}
     return (
         <ScrollView>
       <View style={stylecss.container}>

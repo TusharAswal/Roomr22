@@ -77,7 +77,7 @@ class AddPerson extends Component {
          console.log(users);
       await AsyncStorage.setItem('users', 
         JSON.stringify(users)); 
-      Actions.searchroomer();
+        alert('Added');
       }
    
     }

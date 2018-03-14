@@ -6,7 +6,7 @@ import styles from './commonstyles';
 import camera_png from './camera.png'
 import add_more_png from './plus.png'
 import TagInput from 'react-native-tag-input';
-//import { RNCamera } from 'react-native-camera';
+
 const inputProps = {
   keyboardType: 'default',
   placeholder: 'Type to add',
@@ -19,7 +19,6 @@ const inputProps = {
 class AddPerson extends Component {
     constructor(props){
       super(props);
-      // asyncusers = 
      this.state = {
        tags:['Cooking','Music','Weekends','Coffee','Running'],
        text: "",
@@ -27,7 +26,6 @@ class AddPerson extends Component {
        path:'https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-male-circle-blue-512.png',
        name:'',
        age:'',
-      //  users:asyncusers
     }
   }
   setresetcamera(){
