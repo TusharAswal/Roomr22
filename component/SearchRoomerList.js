@@ -70,10 +70,9 @@ export default class SearchRoomerList extends Component {
         html = ( <ScrollView>
               {filteredEmails.map(email => {
                   return (
-                  <TouchableOpacity onPress={() => this.searchperson(email.path,email.name)}>
+                  <TouchableOpacity key={'ksj'} onPress={() => this.searchperson(email.path,email.name)}>
                       <View>
-                          <View style = {{flex:1, flexDirection:'row', margin:5, paddingLeft:10,borderWidth:2,
-                              justifyContent:'center'}}>
+                          <View style = {{flex:1, flexDirection:'row', margin:5, paddingLeft:10,justifyContent:'center'}}>
                                   <View style={{flex: 0.3,justifyContent:'center'}}>
                                       <Image source={{uri: email.path}}
                                        style={{width:70, height:70, borderRadius:35}}/>

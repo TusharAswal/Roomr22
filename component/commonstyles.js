@@ -8,7 +8,7 @@ export default StyleSheet.create({
     flexcontentmiddle: {
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#fff',
+        backgroundColor: '#4682b4',
     },
     ImageStyle: {
         padding: 10,

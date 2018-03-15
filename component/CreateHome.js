@@ -76,8 +76,6 @@ FlatListItemSeparator = () => {
   render() {
     return (
       <View style={{flex:1}}>
-      {/* <ScrollView> */}
-
         <View style={[{flex:0.3}]}>
             <View>
              <Image source={page3} style={{height:height(25),width:null}}/>
@@ -94,23 +92,23 @@ FlatListItemSeparator = () => {
         </View>
         <View style={[{flex:0.5,backgroundColor:'floralwhite'}]}>
         <ScrollView>
-        <FlatList
+        <FlatList keyExtractor={item => item.email}
          horizontal={false}
-         contentContainerStyle={{flex: 1,alignItems: 'center',justifyContent:'center',marginTop:10}}
+         contentContainerStyle={{flex: 1,alignItems:'center',justifyContent:'center',marginTop:10}}
          numColumns={3}
           data={ this.state.list }
           ItemSeparatorComponent = {this.FlatListItemSeparator}
           renderItem={({item}) =>{
             let action='';
-            
+             //Modal for info hereS
             return(
               <View style={{marginLeft:10,marginRight:10,marginBottom:0,marginTop:10}}>
                 <View>         
-                <TouchableOpacity onPress={(e)=>{(item.onclick==1)?Actions.searchroomer():''}}>   
+                <TouchableOpacity key={'Abc'} onPress={(e)=>{(item.onclick==1)?Actions.searchroomer():''}}>   
                   <Image source={{uri:item.image}} style={{width:120,height:120,borderRadius:240}}  />
                 </TouchableOpacity>
                 </View>
-                <View style={{backgroundcolor:'rgb(117,192,232)',alignItems: 'center'}}>
+                <View style={{backgroundColor:'rgb(254,250,240)',alignItems: 'center'}}>
                   <Text style={{fontWeight:'bold'}}> {item.title} </Text>
                 </View>
              </View>
@@ -121,7 +119,7 @@ FlatListItemSeparator = () => {
         </ScrollView>
         </View>
         <View style={{alignItems:'flex-end',marginRight:15,flex:0.1}}>
-        <TouchableOpacity>
+        <TouchableOpacity key={'pqr'} >
           <Image source={require('./ok.png')} style={{width:70,height:70,marginTop:15}}/>
           </TouchableOpacity>
         </View>

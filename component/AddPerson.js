@@ -89,7 +89,7 @@ class AddPerson extends Component {
           <View style={[{flex:0.9}]}>
 
           <ScrollView>
-          <View style={{flex:0.4,alignItems:'center',backgroundColor:'rgb(247,246,246)'}}>
+          <View style={{flex:0.6,alignItems:'center',backgroundColor:'rgb(247,246,246)'}}>
                 <View style={{flex:0.8,margin:20,}}>
                 <TouchableOpacity>
                   <Image source={{uri:this.state.path}} style={{width:100,height:100,borderColor:'gray',borderRadius:80}}/>
@@ -97,7 +97,7 @@ class AddPerson extends Component {
                 </View>
                 <View style={{flex:0.2,flexDirection:'row'}}>
                     <View style={{flex:0.5,marginLeft:40}}><Text style={{color:'black',fontSize:20}}>Name</Text></View>
-                    <View style={{flex:0.5}}><Text style={{color:'black',fontSize:20}}>Age</Text></View>
+                    <View keyboardType="numeric" style={{flex:0.5}}><Text style={{color:'black',fontSize:20}}>Age</Text></View>
                 </View>
           </View>
           <View style={{flex:0.1,flexDirection:'row',alignItems:'center'}}>
@@ -118,34 +118,34 @@ class AddPerson extends Component {
                   />
                   </View>
             </View>
-          <View style={{flex:0.1,flexDirection:'row',alignItems:'center',backgroundColor:'rgb(247,246,246)'}}>
-                <View style={{flex:0.5,marginLeft:40}}><Text style={{color:'black',fontSize:20}}>Tags</Text></View>
+            <View style={{flex:0.1,flexDirection:'row',alignItems:'center',backgroundColor:'rgb(247,246,246)'}}>
+                <View style={{flex:0.5,marginLeft:40}}>
+                    <Text style={{color:'black',fontSize:20}}>Tags</Text>
+                </View>
             </View>
-            <View style={{alignItems:'center',justifyContent:'center',flex:0.4,margin:20,height:height(35)}}>
 
-    
-          <TagInput
-            style={{fontSize:20}}
-            value={this.state.tags}
-            onChange={this.onChangeTags}
-            labelExtractor={this.labelExtractor}
-            text={this.state.text}
-            tagContainerStyle={{height:50,borderRadius:20}}
-            onChangeText={this.onChangeText}
-            tagColor="#412277"
-            tagTextColor="white"
-            inputProps={inputProps}
-            maxHeight={75}
-           
-          />
+            <View style={{alignItems:'center',justifyContent:'center',flex:0.2,margin:20,height:height(35)}}>
+                <TagInput
+                value={this.state.tags}
+                onChange={this.onChangeTags}
+                labelExtractor={this.labelExtractor}
+                text={this.state.text}
+                tagContainerStyle={{height:50,borderRadius:20,width:100}}
+                onChangeText={this.onChangeText}
+                tagColor="#412277"
+                tagTextStyle={{fontSize:15}}
+                tagTextColor="white"
+                inputProps={inputProps}
+                maxHeight={75}
+              />
             </View>
 
           </ScrollView>
-          </View>
+          </View >
 
-          <View style={[{flex:0.1,margin:15,backgroundColor:'rgb(68,179,228)'},styles.flexcontentmiddle]}>
-            <TouchableOpacity onPress={(e)=>{this._addPerson();}}>
-                <Text style={[{fontSize:20,margin:10,backgroundColor:'rgb(68,179,228)'}]}>Add</Text>
+          <View style={[{flex:0.1,margin:15,backgroundColor:'rgb(68,179,228)',borderRadius:100},styles.flexcontentmiddle]}>
+            <TouchableOpacity  onPress={(e)=>{this._addPerson();}}>
+                <Text style={[{fontSize:20,margin:10,backgroundColor:'#4682b4'}]}>Add</Text>
             </TouchableOpacity>
             </View>
          
@@ -179,7 +179,7 @@ class AddPerson extends Component {
     highlighttext: {
         fontWeight: 'bold',
         fontSize:30,
-        color:'rgb(0,101,150)',
+        backgroundColor:'rgb(0,101,150)',
     },
     roundedimage: {
         width:200,
